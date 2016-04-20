@@ -1,3 +1,10 @@
+var endPoint = "PROD";
+
 function toggleEndPoint() {
-  document.getElementById("endPoint").innerHTML = "INTERN";
+  if (endPoint == "PROD") {
+    endPoint = "INTERN";
+  } else {
+    endPoint = "PROD";
   }
+  document.getElementById("endPoint").innerHTML = endPoint;
+}
