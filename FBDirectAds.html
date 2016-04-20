@@ -9,78 +9,78 @@
 
 <body>
 	
-  <!-- HEADER -->
-  <div id="header_wrap" class="outer">
-      <header class="inner">
-        <h1 id="project_title">Audience Network Test Pages</h1>
-      </header>
-  </div>
-
+	<!-- HEADER -->
+	<div id="header_wrap" class="outer">
+		<header class="inner">
+		<h1 id="project_title">Audience Network Test Pages</h1>
+		</header>
+	</div>
+	
 	<div id="site">			
 		<div id="main_content_wrap" class="outer">
-		  <section id="main_content">
-					<h3>Medium Rectangle</h3>
-            <fb:ad placementid="191347624543764_205872599757933" format="300x250" testmode="false"></fb:ad>
-					<h3>Banner Ad</h3>
-            <fb:ad placementid="191347624543764_205872916424568" format="320x50" testmode="false"></fb:ad>
-					<h3>Native Ad</h3>
-            <fb:ad placementid="191347624543764_205872839757909"format="native"nativeadid="ad_root"></fb:ad>
-        		<div id="ad_root">
-            	<a class="fbAdLink">
-                <div class="fbAdMedia thirdPartyMediaClass"></div>
-                <div class="fbAdTitle thirdPartyTitleClass"></div>
-                <div class="fbAdBody thirdPartyBodyClass"></div>
-                <div class="fbAdCallToAction thirdPartyCallToActionClass"></div>
-              </a>
-            </div>
-					<h4 class="info">Suggestions</h4>
-					<ul>
-						<li>Run on mobile chrome, safari, firefox, browser</li>
-						<li>Run in facebook browser</li>
-						<li>Tap on things</li>
-	                <li>Try different ad formats</li>
-					</ul>
-	
-					<h4 class="help">Need some help?</h4>
-					<ul>
-						<li>Talk to John!</li>
-					</ul>
-			</section>
-		</div> <!-- / #main_content_wrap -->
-			
-		<footer id="page-footer">
-			<div class="main">
-				<div class="content">
-					Altervista - <a href="http://en.altervista.org/" title="Free Web Space" rel="nofollow">Free Web Space</a>
-				</div>
+		<section id="main_content">
+			<h3>Medium Rectangle</h3>
+			<fb:ad placementid="191347624543764_205872599757933" format="300x250" testmode="false"></fb:ad>
+			<h3>Banner Ad</h3>
+			<fb:ad placementid="191347624543764_205872916424568" format="320x50" testmode="false"></fb:ad>
+			<h3>Native Ad</h3>
+			<fb:ad placementid="191347624543764_205872839757909"format="native"nativeadid="ad_root"></fb:ad>
+			<div id="ad_root">
+			<a class="fbAdLink">
+				<div class="fbAdMedia thirdPartyMediaClass"></div>
+				<div class="fbAdTitle thirdPartyTitleClass"></div>
+				<div class="fbAdBody thirdPartyBodyClass"></div>
+				<div class="fbAdCallToAction thirdPartyCallToActionClass"></div>
+			</a>
 			</div>
-		</footer> <!-- / #page-footer -->
+			<h4 class="info">Suggestions</h4>
+			<ul>
+				<li>Run on mobile chrome, safari, firefox, browser</li>
+				<li>Run in facebook browser</li>
+				<li>Tap on things</li>
+				<li>Try different ad formats</li>
+			</ul>
 		
+			<h4 class="help">Need some help?</h4>
+			<ul>
+				<li>Talk to Dominic!</li>
+			</ul>
+		</section>
+		</div> <!-- / #main_content_wrap -->
+	
+		<footer id="page-footer">
+		<div class="main">
+			<div class="content">
+			Altervista - <a href="http://en.altervista.org/" title="Free Web Space" rel="nofollow">Free Web Space</a>
+			</div>
+		</div>
+		</footer> <!-- / #page-footer -->
+	
 	</div> <!-- / #site -->
-
-    <script>
-      window.fbAsyncInit = function() {
-        FB.Event.subscribe(
-          'ad.loaded',
-          function(placementId) {
-            console.log('Audience Network ad loaded');
-          }
-        );
-        FB.Event.subscribe(
-          'ad.error',
-          function(errorCode, errorMessage, placementId) {
-            console.log('Audience Network error (' + errorCode + ') ' + errorMessage);
-          }
-        );
-      };
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=191347624543764";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
+	
+	<script>
+		window.fbAsyncInit = function() {
+			FB.Event.subscribe(
+			'ad.loaded',
+			function(placementId) {
+				console.log('Audience Network ad loaded');
+				}
+			);
+			FB.Event.subscribe(
+			'ad.error',
+			function(errorCode, errorMessage, placementId) {
+				console.log('Audience Network error (' + errorCode + ') ' + errorMessage);
+				}
+			);
+		};
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=191347624543764";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 
 </body>
 </html>
