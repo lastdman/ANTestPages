@@ -1,3 +1,3 @@
-function toggle() {
+function toggleEndPoint() {
   document.getElementById("endPoint").innerHTML = "INTERN";
   }
