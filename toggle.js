@@ -1,8 +1,9 @@
 var endPoint = "PROD";
 
 // Self invoke function
-(function setEndPoint () {
+var invokeSetEndPoint = (function setEndPoint () {
   document.getElementById("endPoint").innerHTML = endPoint;
+  return setEndPoint;
 })();
 
 function toggleEndPoint() {
@@ -11,5 +12,5 @@ function toggleEndPoint() {
   } else {
     endPoint = "PROD";
   }
-  document.setEndPoint();
+  invokeSetEndPoint();
 }
