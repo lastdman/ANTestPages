@@ -1,9 +1,9 @@
 var endPoint = "PROD";
 
-function setEndPoint (newEndPoint) {
-  endPoint = newEndPoint;
+// Self invoke function
+(function setEndPoint () {
   document.getElementById("endPoint").innerHTML = endPoint;
-}
+})();
 
 function toggleEndPoint() {
   if (endPoint == "PROD") {
@@ -11,4 +11,5 @@ function toggleEndPoint() {
   } else {
     endPoint = "PROD";
   }
+  setEndPoint();
 }
