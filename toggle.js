@@ -11,5 +11,5 @@ function toggleEndPoint() {
   } else {
     endPoint = "PROD";
   }
-  setEndPoint();
+  document.setEndPoint();
 }
