@@ -59,7 +59,7 @@
 		</div>	
 	</div> <!-- / #site -->
 	
-	<script>
+	<script src=toggle.js>
 		window.fbAsyncInit = function() {
 			FB.Event.subscribe(
 			'ad.loaded',
@@ -78,7 +78,8 @@
 			var js, fjs = d.getElementsByTagName(s)[0];
 			if (d.getElementById(id)) return;
 			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=191347624543764";
+			js.src = endPointURL;
+			//js.src = "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=191347624543764";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
