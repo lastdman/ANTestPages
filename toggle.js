@@ -4,6 +4,7 @@ var endPointURL = "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=
 // Self invoke function
 var invokeSetEndPoint = (function setEndPoint () {
   document.getElementById("endPoint").innerHTML = endPoint;
+  document.getElementByID("endPointURL").innerHTML = endPointURL;
   return setEndPoint;
 })();
 
