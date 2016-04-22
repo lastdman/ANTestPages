@@ -17,3 +17,9 @@ function toggleEndPoint() {
   }
   invokeSetEndPoint();
 }
+
+function reloadAds() {
+  var container = document.getElementById("site");
+  var content = container.innerHTML;
+  container.innerHTML = content;
+}
