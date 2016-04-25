@@ -1,14 +1,24 @@
-sessionStorage.setItem("endPoint", "PROD");
-sessionStorage.setItem("endPointURL", "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=191347624543764");
+//sessionStorage.setItem("endPoint", "PROD");
+//sessionStorage.setItem("endPointURL", "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=191347624543764");
 //var endPoint = "PROD";
 //var endPointURL = "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=191347624543764";
 
 // Self invoke function
-var invokeSetEndPoint = (function setEndPoint () {
-  document.getElementById("endPoint").innerHTML = sessionStorage.getItem("endPoint");
-  document.getElementById("endPointURL").innerHTML = sessionStorage.getItem("endPointURL");
+//var invokeSetEndPoint = (function setEndPoint () {
+//  document.getElementById("endPoint").innerHTML = sessionStorage.getItem("endPoint");
+//  document.getElementById("endPointURL").innerHTML = sessionStorage.getItem("endPointURL");
+//  return setEndPoint;
+//})();
+
+function setEndPoint () {
+  if (sessionStorage.endPoint) {
+    document.getElementById("endPoint").innerHTML = sessionStorage.getItem("endPoint");
+    document.getElementById("endPointURL").innerHTML = sessionStorage.getItem("endPointURL");
+  } else {
+    setEndPointToProd();
+  }
   return setEndPoint;
-})();
+}
 
 function setEndPointToProd() {
   sessionStorage.endPoint = "PROD";
@@ -26,7 +36,7 @@ function toggleEndPoint() {
   } else {
     setEndPointToProd();
   }
-  invokeSetEndPoint();
+  setEndPoint();
 }
 
 function reloadAds() {
