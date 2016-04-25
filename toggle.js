@@ -16,7 +16,7 @@ function setEndPointToProd() {
 
 function setEndPointToIntern() {
   sessionStorage.endPoint = "INTERN";
-  sessionStorage.endPointURL = "//www.tonypan.sb.facebook.com/assets.php/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=191347624543764";
+  sessionStorage.endPointURL = "//www.intern.facebook.com/assets.php/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=191347624543764";
 }
 
 function toggleEndPoint() {
@@ -26,6 +26,7 @@ function toggleEndPoint() {
     setEndPointToProd();
   }
   invokeSetEndPoint();
+  window.location.reload();
 }
 
 function reloadAds() {
