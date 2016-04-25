@@ -1,7 +1,7 @@
 //sessionStorage.setItem("endPoint", "PROD");
 //sessionStorage.setItem("endPointURL", "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=191347624543764");
-//var endPoint = "PROD";
-//var endPointURL = "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=191347624543764";
+var endPoint = sessionStorage.endPoint;
+var endPointURL = sessionStorage.endPointURL;
 
 // Self invoke function
 //var invokeSetEndPoint = (function setEndPoint () {
