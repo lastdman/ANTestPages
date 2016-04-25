@@ -32,6 +32,5 @@ function toggleEndPoint() {
 function reloadAds() {
   var container = document.getElementById("site");
   var content = container.innerHTML;
-  invokeSetEndPoint();
   container.innerHTML = content;
 }
