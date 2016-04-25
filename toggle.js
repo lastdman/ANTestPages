@@ -4,13 +4,7 @@ var endPoint = sessionStorage.endPoint;
 var endPointURL = sessionStorage.endPointURL;
 
 // Self invoke function
-//var invokeSetEndPoint = (function setEndPoint () {
-//  document.getElementById("endPoint").innerHTML = sessionStorage.getItem("endPoint");
-//  document.getElementById("endPointURL").innerHTML = sessionStorage.getItem("endPointURL");
-//  return setEndPoint;
-//})();
-
-function setEndPoint () {
+var invokeSetEndPoint = (function setEndPoint () {
   if (sessionStorage.endPoint) {
     document.getElementById("endPoint").innerHTML = sessionStorage.getItem("endPoint");
     document.getElementById("endPointURL").innerHTML = sessionStorage.getItem("endPointURL");
@@ -18,7 +12,8 @@ function setEndPoint () {
     setEndPointToProd();
   }
   return setEndPoint;
-}
+})();
+
 
 function setEndPointToProd() {
   sessionStorage.endPoint = "PROD";
@@ -36,7 +31,7 @@ function toggleEndPoint() {
   } else {
     setEndPointToProd();
   }
-  setEndPoint();
+  invokeSetEndPoint();
 }
 
 function reloadAds() {
