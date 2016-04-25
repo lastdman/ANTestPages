@@ -1,9 +1,4 @@
-//sessionStorage.setItem("endPoint", "PROD");
-//sessionStorage.setItem("endPointURL", "//connect.facebook.net/en_US/sdk/xfbml.ad.js#xfbml=1&version=v2.5&appId=191347624543764");
-//var endPoint = sessionStorage.endPoint;
-//var endPointURL = sessionStorage.endPointURL;
-
-// Self invoke function
+// Self invoke function. This is initialize the endpoint when the page is first loaded.
 var invokeSetEndPoint = (function setEndPoint () {
   if (sessionStorage.endPoint) {
     document.getElementById("endPoint").innerHTML = sessionStorage.getItem("endPoint");
@@ -13,7 +8,6 @@ var invokeSetEndPoint = (function setEndPoint () {
   }
   return setEndPoint;
 })();
-
 
 function setEndPointToProd() {
   sessionStorage.endPoint = "PROD";
