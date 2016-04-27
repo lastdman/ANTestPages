@@ -29,6 +29,16 @@ function toggleEndPoint() {
   window.location.reload();
 }
 
+function toggleLongText() {
+  if (sessionStorage.longText == "display: none") {
+    sessionStorage.longText = "display: block";
+  } else {
+    sessionStorage.longText = "display: none";
+  }
+  return sessionStorage.longText;
+  window.location.reload();
+}
+
 function reloadAds() {
   var container = document.getElementById("site");
   var content = container.innerHTML;
