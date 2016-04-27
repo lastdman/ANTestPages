@@ -29,26 +29,6 @@ function toggleEndPoint() {
   window.location.reload();
 }
 
-// Self invoke function. This is initialize to hide long text when the page is first loaded.
-var invokeSetLongText = (function setLongText () {
-  if (sessionStorage.longText) {
-    document.getElementById("long_text").style.display = "block";
-  } else {
-    document.getElementById("long_text").style.display = "none";
-  }
-  return setLongText;
-})();
-
-function toggleLongText() {
-  if (sessionStorage.longText == false) {
-    sessionStorage.longText = true;
-  } else {
-    sessionStorage.longText = false;
-  }
-  invokeSetLongText();
-  window.location.reload();
-}
-
 function reloadAds() {
   var container = document.getElementById("site");
   var content = container.innerHTML;
