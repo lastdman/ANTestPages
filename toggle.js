@@ -29,13 +29,23 @@ function toggleEndPoint() {
   window.location.reload();
 }
 
-function toggleLongText() {
-  if (sessionStorage.longText == "display: none") {
-    sessionStorage.longText = "display: block";
+// Self invoke function. This is initialize to hide long text when the page is first loaded.
+var invokeSetLongText = (function setLongText () {
+  if (sessionStorage.longText) {
+    document.getElementById("long_text").display = block;
   } else {
-    sessionStorage.longText = "display: none";
+    document.getElementById("long_text").display = none;
   }
-  return sessionStorage.longText;
+  return setLongText;
+})();
+
+function toggleLongText() {
+  if (sessionStorage.longText == false) {
+    sessionStorage.longText = true;
+  } else {
+    sessionStorage.longText = false;
+  }
+  invokeSetLongText();
   window.location.reload();
 }
 
