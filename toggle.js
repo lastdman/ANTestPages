@@ -32,9 +32,9 @@ function toggleEndPoint() {
 // Self invoke function. This is initialize to hide long text when the page is first loaded.
 var invokeSetLongText = (function setLongText () {
   if (sessionStorage.longText) {
-    document.getElementById("long_text").display = "block";
+    document.getElementById("long_text").style.display = "block";
   } else {
-    document.getElementById("long_text").display = "none";
+    document.getElementById("long_text").style.display = "none";
   }
   return setLongText;
 })();
