@@ -130,7 +130,7 @@
 		</section>
   		<section id="main_content">
   			<h3>Error message:</h3>
-			<div id="error_message">No error</div>
+			<div id="error_message"></div>
   			<h3>Medium Rectangle</h3>
   			<fb:ad placementid="191347624543764_205872599757933" format="300x250" testmode="false"></fb:ad>
   			<h3>Banner Ad</h3>
@@ -183,7 +183,7 @@
 			function(errorCode, errorMessage, placementId) {
 				console.log('Audience Network error (' + errorCode + ') ' + errorMessage);
 				document.getElementById('error_message').style.color = 'red';
-				document.getElementById('error_message').innerHTML = errorCode + ": " + errorMessage;
+				document.getElementById('error_message').innerHTML += errorCode + ": " + errorMessage + "</br>";
 				}
 			);
 		};
