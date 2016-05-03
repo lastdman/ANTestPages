@@ -110,7 +110,8 @@
 			'ad.error',
 			function(errorCode, errorMessage, placementId) {
 				console.log('Audience Network error (' + errorCode + ') ' + errorMessage);
-				document.getElementById('error_message').innerHTML = errorMessage;
+				document.getElementById('error_message').style.color = 'red';
+				document.getElementById('error_message').innerHTML = errorCode + ": " + errorMessage;
 				}
 			);
 		};
